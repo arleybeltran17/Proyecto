@@ -1,4 +1,6 @@
-<%--
+<%@ page import="java.text.SimpleDateFormat" %>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.util.Calendar" %><%--
   Created by IntelliJ IDEA.
   User: USUARIO
   Date: 26/04/2023
@@ -7,7 +9,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <title>Login</title>
@@ -20,7 +22,8 @@
 
 <header>
     <br><br><br>
-    <img src="img/logo.png" alt="logo" width="350" height="300">
+    <h1> <%= "Iniciar Sesion" %> </h1>
+    <img src="img/logito.png" alt="logo" >
 
 
 </header>
@@ -46,7 +49,7 @@
                 </li>
 
                 <li class="button">
-                    <button type="submit">Envíar</button>
+                    <button type="submit">Ingresar</button>
                 </li>
 
 
@@ -54,11 +57,26 @@
         </form>
         <br>
         <footer>
-            <h1>&copy; 2023 </h1>
+            <h1>
+
+                    copy; <%=displayDate()%>
+
+                <%!
+                    public String displayDate() {
+                        SimpleDateFormat dateFormat = new SimpleDateFormat("YYYY");
+                        Date date = Calendar.getInstance().getTime();
+                        return dateFormat.format(date);
+                    }
+                %>
+            </h1>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </div>
 </section>
+
+
+
 </body>
+
 </html>
 
