@@ -1,5 +1,5 @@
 # Proyecto
-Este proyecto corresponde a todos loe talleres realizados
+Este proyecto corresponde a todos los talleres realizados
 Taller 1: Formulario De Registro
 Taller 2: Login
 Taller 3: Conexion Base De Datos
